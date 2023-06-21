@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/IMG_8978.JPG";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -16,15 +16,14 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              LET ME <span className="orange"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+              I've been programming since I was 14 years old.
               <br />
-              <br />I am fluent in classics like
+              <br />I gratuated college in 2011 with a degree in Computer Engineering from the Univerisity of Texas. While in school I learned: 
               <i>
-                <b className="purple"> C++, Javascript and Go. </b>
+                <b className="purple"> Assembly, C and Java. </b>
               </i>
               <br />
               <br />
@@ -54,7 +53,7 @@ function Home2() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img src={myImg} className="avatar" alt="avatar" />
             </Tilt>
           </Col>
         </Row>
@@ -62,7 +61,7 @@ function Home2() {
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
             <p>
-              Feel free to <span className="purple">connect </span>with me
+              Feel free to <span className="orange">connect </span>with me
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
