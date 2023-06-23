@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/IMG_8978.JPG";
-import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
   AiOutlineTwitter,
@@ -9,12 +8,12 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
-function Home2() {
+function Home2({homeDescription}) {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
-          <Col md={8} className="home-about-description">
+          <Col md={8} className={homeDescription}>
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="orange"> INTRODUCE </span> MYSELF
             </h1>
@@ -52,9 +51,7 @@ function Home2() {
             </p>
           </Col>
           <Col md={4} className="myAvtar">
-            <Tilt>
               <img src={myImg} className="avatar" alt="avatar" />
-            </Tilt>
           </Col>
         </Row>
         <Row>

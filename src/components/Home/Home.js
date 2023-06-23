@@ -5,15 +5,42 @@ import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 
+// react using hooks
+import { useState, useEffect } from 'react';
+
+
 function Home() {
 
-  let homeClassName = 'home-header'; // Default class name
+  const [width, setWidth] = useState(window.innerWidth); // check width size of the window
+  const [homeClassName, setHomeClassName] = useState('home-header'); // check width size of the window
+  const [homeDescription, setHomeDescription] = useState('home-about-description'); // check width size of the window
+  const [typeStyle, setTypeStyle] = useState({ padding: 50, textAlign: "left" })
 
-  if (window.matchMedia('(max-width: 767px)').matches) {
-    homeClassName = 'home-header-mobile'; // Mobile-specific class name
-  }
+  useEffect(()=>{
+    if(width < 767){
+      setHomeClassName('home-header-mobile'); // Mobile-specific class name
+      setTypeStyle({ paddingBottom: 50, paddingRight: 50, paddingLeft: 50, paddingTop: 20, textAlign: "left"})
+      setHomeDescription('home-about-description-mobile')
+    } else if( width >= 767){
+      setHomeClassName('home-header'); // Mobile-specific class name
+      setTypeStyle({ padding: 50, textAlign: "left" })
+      setHomeDescription('home-about-description')
+    }
+  }, [width])
 
-  console.log("home class name: ", homeClassName)
+
+  // optional: save the width of the window using state
+  const handleWindowSizeChange = () => {
+      setWidth(window.innerWidth);
+  };
+
+  // call your useEffect
+  useEffect(() => {
+      window.addEventListener('resize', handleWindowSizeChange);
+      return () => {
+          window.removeEventListener('resize', handleWindowSizeChange);
+      };
+  }, []);
 
   return (
     <section>
@@ -34,7 +61,7 @@ function Home() {
                 <strong className="main-name"> CJ Carnicle</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={typeStyle}>
                 <Type />
               </div>
             </Col>
@@ -50,7 +77,7 @@ function Home() {
           </Row>
         </Container>
       </Container>
-      <Home2 />
+      <Home2 homeDescription = {homeDescription}/>
     </section>
   );
 }

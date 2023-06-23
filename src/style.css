@@ -345,6 +345,13 @@ button:focus {
   text-align: center;
 }
 
+.home-about-description-mobile {
+  color: white !important;
+  padding-top: 50px !important;
+  padding-bottom: 20px !important;
+  text-align: center;
+}
+
 .home-about-body {
   padding-top: 50px;
   font-size: 1.2em !important;
@@ -469,13 +476,13 @@ button:focus {
 .project-card {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
-  padding-left: 25px !important;
-  padding-right: 25px !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
   height: auto !important;
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  box-shadow: 0 4px 5px 3px #067EB1 !important;
   color: white !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
@@ -485,7 +492,7 @@ button:focus {
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+  box-shadow: 0 4px 4px 5px #39B8EF !important;
 }
 
 .blog-card {
@@ -533,14 +540,14 @@ button:focus {
 
 .btn-primary {
   color: #fff !important;
-  background-color: #623686 !important;
+  background-color: #067EB1 !important;
   border-color: #067EB1 !important;
 }
 
 .btn-primary:hover {
   color: #fff !important;
-  background-color: #6d20c5d7 !important;
-  border-color: #6d20c5d7 !important;
+  background-color: #39B8EF !important;
+  border-color: #39B8EF !important;
 }
 .btn:focus {
   outline: none !important;
@@ -550,7 +557,6 @@ button:focus {
   color: white !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
-  padding-top: 10px !important;
 }
 
 /* --------- */
@@ -559,7 +565,7 @@ button:focus {
 
 .about-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 100px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
