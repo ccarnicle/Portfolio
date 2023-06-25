@@ -24,9 +24,10 @@ function Projects() {
               imgPath={ais}
               isBlog={false}
               title="aiSports - Crypto Fantasy Sports"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              description="aiSports is a daily fantasy sports (DFS) platform built on the blockchain. Users enter in the day’s contests and win crypto rewards. In it's first season, aiSports averaged 3.5k Monthly Active Users. I've built aiSports using React, Node.js, GCP, Solidity and Cadence."
+              //description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              webLink="https://aisportspro.com" 
+              demoLink="https://youtu.be/Z_XXRQnep74" //change this to the latest demo youtube
             />
           </Col>
 
@@ -35,9 +36,10 @@ function Projects() {
               imgPath={nft}
               isBlog={false}
               title="AI Generated NFTs"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              description="Using Stable Diffusion, I created a set of 2000 AI generated Digital Collectibles. These NFTs are live on the Flow blockchain and feature unique images of 20 different NBA players in 5 different scenarios. Our collectibles have sold for up to $200 on the Flowty marketplace."
+              //description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
+              marketplaceLink="https://www.flowty.io/collection/0xabe5a2bf47ce5bf3/aiSportsMinter"
+              contractLink="https://flow-view-source.com/mainnet/account/0xabe5a2bf47ce5bf3/contract/aiSportsMinter"
             />
           </Col>
 
@@ -46,9 +48,9 @@ function Projects() {
               imgPath={nftix}
               isBlog={false}
               title="NFTickets"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              description= "Our entry into ETH Denver 2022 aimed to be the EventBrite of web3. NFTickets is an all in one platform that utilizes NFTs to revolutionize the ticketing industry. In one week, we built a working prototype on the Polygon network and won $1500 of prizes in the hackathon."
+              ghLink="https://github.com/ccarnicle/nftickets"
+              demoLink="https://www.youtube.com/watch?v=Ygopuamzetg"              
             />
           </Col>
 
@@ -57,9 +59,9 @@ function Projects() {
               imgPath={aisv1}
               isBlog={false}
               title="aiSports V1 on Ethereum"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              description="I originally built AI sports around a Machine Learning algorithm that I developed utlizing GCP's Vertex-AI service. This gave me accurate predictions for every NBA player, every day. I used the predictions to create CryptoDFS and launched the first version on Etherium testnet."
+              webLink="https://fantasyball-ahqsoecnu-ccarnicle.vercel.app/"
+              demoLink="https://youtu.be/Cc45p_9ombo"
             />
           </Col>
 

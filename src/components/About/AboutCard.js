@@ -8,33 +8,26 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Soumyajit Behera </span>
-            from <span className="purple"> Bhubaneswar, India.</span>
-            <br /> I am a final year student pursuing an Integrated MSc (IMSc)
-            in Maths and Computing at BIT Mesra.
-            <br />
-            Additionally, I am currently employed as a software developer at
-            Juspay.
+            I grew up and went to college in <span className="purple">Texas</span>{" "}
+            then spent 9 years in <span className="purple">San Francisco.</span> I am currently a Digital Nomad and spend the majority of my time across <span className="purple"> the US and Mexico.</span>
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            Over the last 4 years, I have held a part time consulting gig while building my Web3 Fantasy Sports App - <a className="maillink"  href = "https://aisportspro.com">aiSports.</a> In our first season, aiSports has grown to over 3.5k Monthly Active Users.
+            <br />
+            <br />
+            In addition to the skillsets below, I've utilzed these technologies to build aiSports:
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games
+              <ImPointRight /> AI SDKs - ChatGPT and Stable Diffusion
             </li>
             <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
+              <ImPointRight /> Blockchain Programming - Ethereum (Solidity) & Flow (Cadence)
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+              <ImPointRight /> Google Cloud Platform - Vertex-AI, Firebase, BigQuery
             </li>
           </ul>
-
-          <p style={{ color: "#FF9344" }}>
-            "Who knows if I will use this quote tag"{" "}
-          </p>
-          <footer className="blockquote-footer">CJ</footer>
         </blockquote>
       </Card.Body>
     </Card>

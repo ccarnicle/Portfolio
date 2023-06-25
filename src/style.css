@@ -27,6 +27,14 @@ button:focus {
   box-shadow: none !important;
 }
 
+.maillink {
+  color: #39B8EF; /* Change the default color */
+}
+
+.maillink:hover {
+  color: #067EB1; /* Change the hover color */
+}
+
 /* --------- */
 /*  Preloader */
 /* --------- */
