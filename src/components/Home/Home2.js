@@ -20,7 +20,7 @@ function Home2({homeDescription}) {
             <p className="home-about-body">
               I took my first programming class 14 years old and it's been a part of my life ever since.
               <br />
-              <br />I gratuated college in 2011 with a degree in Computer Engineering from the Univerisity of Texas. While in school I learned 
+              <br />I graduated from the Univerisity of Texas with a degree in Computer Engineering. While in school I honed my skills in
               <i>
                 <b className="purple"> C, C++, Java and Computer Design.</b>
               </i>
