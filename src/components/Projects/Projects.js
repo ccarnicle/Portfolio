@@ -6,6 +6,10 @@ import nft from "../../Assets/Projects/nft.png";
 import ais from "../../Assets/Projects/ais.png";
 import aisv1 from "../../Assets/Projects/aisv1.png";
 import nftix from "../../Assets/Projects/nftickets.png";
+import pdf2s from "../../Assets/Projects/sheets.png";
+import gpt4 from "../../Assets/Projects/gpt4.png";
+
+
 
 function Projects() {
   return (
@@ -24,12 +28,39 @@ function Projects() {
               imgPath={ais}
               isBlog={false}
               title="aiSports - Crypto Fantasy Sports"
-              description="aiSports is a daily fantasy sports (DFS) platform built on the blockchain. Users enter in the day’s contests and win crypto rewards. In it's first season, aiSports averaged 3.5k Monthly Active Users. I've built aiSports using React, Node.js, GCP, Solidity and Cadence."
+              description="aiSports is a daily fantasy sports (DFS) platform built on the blockchain. Users enter in the day’s contests and win crypto rewards. In its first season, aiSports averaged 3.5k Monthly Active Users. I've built aiSports using React, Node.js, GCP, Solidity and Cadence."
               //description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
               webLink="https://aisportspro.com" 
               demoLink="https://youtu.be/Z_XXRQnep74" //change this to the latest demo youtube
             />
           </Col>
+
+
+          <Col lg={6} className="project-card">
+            <ProjectCard
+              imgPath={pdf2s}
+              isBlog={false}
+              title="pdf2sheets (WIP)"
+              description="I'm building a PDF to Google Sheets converter. This micro-Saas app allows a user to subscribe and convert up to 500 pdf pages per month. I've built pdf2sheets using React, Node.js, Next.js, and the Google Workspace API."
+              //description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              webLink="https://www.pdf2sheets.com/" 
+              demoLink="https://www.youtube.com/watch?v=2k6NneSMYNc" //change this to the latest demo youtube
+            />
+          </Col>
+
+          <Col lg={6} className="project-card">
+            <ProjectCard
+              imgPath={gpt4}
+              isBlog={false}
+              title="GPT4 Interface"
+              description="Since I don't use GPT4 enough to justify a $20/mo subscription, I've built a standalone chat app that uses the OpenAI API. In order to accomidate live chat, I had to stand up an express.js app on Heroku for the backend."
+              //description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              ghLink="https://github.com/ccarnicle/gpt4-ui" //change this to the latest demo youtube
+              webLink="https://gpt4-ui-carnicle.vercel.app/" 
+
+            />
+          </Col>
+
 
           <Col lg={6} className="project-card">
             <ProjectCard

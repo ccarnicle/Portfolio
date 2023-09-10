@@ -65,7 +65,6 @@ function Home() {
                 <Type />
               </div>
             </Col>
-
             <Col md={5} style={{ paddingTop: 10, paddingBottom: 20 }}>
               <img
                 src={homeLogo}
