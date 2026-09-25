@@ -1,4 +1,21 @@
-<h2 align="center">
-  CJ's Portfolio Website<br/>
-  <a href="https://cjcarnicle.com/" target="_blank">cjcarnicle.com</a>
-</h2>
+# Portfolio (cjcarnicle.com)
+
+Personal site built with [Next.js](https://nextjs.org/) App Router.
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Production build
+
+```bash
+npm run build
+npm run start
+```
+
+Deploy the `website-redesign` branch to Vercel for preview before merging to `master`.
