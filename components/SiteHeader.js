@@ -50,24 +50,12 @@ export default function SiteHeader() {
       <p className="location">{site.location}</p>
       <nav className="site-nav" aria-label="Primary">
         {navItems.map((item) => {
-          const isResume = item.href === "/resume";
           const onHome =
             pathname === "/" || pathname === "/project" || pathname === "/projects";
-          const isActive = isResume
-            ? pathname === "/resume"
-            : onHome && item.sectionId === activeSection;
-
-          if (isResume) {
-            return (
-              <Link
-                key={item.label}
-                href={item.href}
-                className={isActive ? "active" : undefined}
-              >
-                {item.label}
-              </Link>
-            );
-          }
+          const isActive =
+            item.sectionId === null
+              ? pathname === item.href
+              : onHome && item.sectionId === activeSection;
 
           return (
             <Link

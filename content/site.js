@@ -1,10 +1,10 @@
 export const site = {
   name: "Christopher J. Carnicle",
-  tagline: "Solutions Engineer, Entrepreneur and Photographer",
+  tagline: "Solutions Engineer, Entrepreneur and Travel Photographer",
   location: "Chicago, IL",
   metaDescription:
     "Solutions engineer in Chicago. Seven years as a Technical Account Manager at Texas Instruments, then six years shipping production Solidity, escrow, and automated payouts at aiSports.",
-  pageTitle: "Christopher J. Carnicle — Solutions Engineer, Entrepreneur and Photographer",
+  pageTitle: "Christopher J. Carnicle — Solutions Engineer, Entrepreneur and Travel Photographer",
   email: "cjcarnicle@gmail.com",
   linkedIn: "https://www.linkedin.com/in/ccarnicle/",
   github: "https://github.com/ccarnicle",
@@ -14,9 +14,109 @@ export const site = {
 export const navItems = [
   { label: "Projects", href: "/#projects", sectionId: "projects" },
   { label: "Experience", href: "/#experience", sectionId: "experience" },
+  { label: "Photography", href: "/photography", sectionId: null },
   { label: "Resume", href: "/resume", sectionId: null },
   { label: "Contact", href: "/#contact", sectionId: "contact" },
 ];
+
+export const photographs = [
+  { src: "/photography/bali_one-6.jpg", width: 2000, height: 1333, alt: "Bali" },
+  { src: "/photography/bali_one-8.jpg", width: 2000, height: 1500, alt: "Bali" },
+  { src: "/photography/bali_two-20.jpg", width: 2000, height: 1333, alt: "Bali" },
+  { src: "/photography/bali_two-21.jpg", width: 2000, height: 1333, alt: "Bali" },
+  { src: "/photography/bali_two-22.jpg", width: 2000, height: 1333, alt: "Bali" },
+  { src: "/photography/california-nothernarizona.jpg", width: 2000, height: 1333, alt: "California and Northern Arizona" },
+  { src: "/photography/california-nothernarizona-5.jpg", width: 2000, height: 1333, alt: "California and Northern Arizona" },
+  { src: "/photography/dsc02207.jpg", width: 2000, height: 1256, alt: "Golden Gate Bridge" },
+  { src: "/photography/dsc02200.jpg", width: 2000, height: 1334, alt: "Travel photograph" },
+  { src: "/photography/dsc07339.jpg", width: 2000, height: 1333, alt: "Travel photograph" },
+  { src: "/photography/dsc07431.jpg", width: 2000, height: 1265, alt: "Travel photograph" },
+  { src: "/photography/dsc07497.jpg", width: 2000, height: 1333, alt: "Travel photograph" },
+  { src: "/photography/dsc07632.jpg", width: 2000, height: 1333, alt: "Travel photograph" },
+  { src: "/photography/houston-4-copy.jpg", width: 2000, height: 1267, alt: "Houston" },
+  { src: "/photography/leonamarlene-2.jpg", width: 2000, height: 1333, alt: "Travel photograph" },
+  { src: "/photography/travel2021-3.jpg", width: 2000, height: 1273, alt: "Travel photograph" },
+  { src: "/photography/travel2021-4.jpg", width: 2000, height: 1193, alt: "Travel photograph" },
+  { src: "/photography/travel2021-5.jpg", width: 2000, height: 1333, alt: "Travel photograph" },
+  { src: "/photography/travel2021-7.jpg", width: 2000, height: 1333, alt: "Travel photograph" },
+  { src: "/photography/travel2021-12.jpg", width: 2000, height: 1333, alt: "Travel photograph" },
+  { src: "/photography/travel2021-13.jpg", width: 2000, height: 1333, alt: "Travel photograph" },
+  { src: "/photography/travel2021-14.jpg", width: 2000, height: 1333, alt: "Travel photograph" },
+  { src: "/photography/travel2021-15.jpg", width: 2000, height: 1333, alt: "Travel photograph" },
+  { src: "/photography/travel2021-18.jpg", width: 2000, height: 1326, alt: "Travel photograph" },
+  { src: "/photography/travel2021-24.jpg", width: 2000, height: 1317, alt: "Travel photograph" },
+  { src: "/photography/travel2021-30.jpg", width: 2000, height: 1345, alt: "Travel photograph" },
+  { src: "/photography/travel2021-31.jpg", width: 2000, height: 1283, alt: "Travel photograph" },
+  { src: "/photography/travel2021-32.jpg", width: 2000, height: 1184, alt: "Travel photograph" },
+  { src: "/photography/yellowstone-4-copy.jpg", width: 2000, height: 1040, alt: "Yellowstone" },
+  { src: "/photography/yellowstone-6-copy.jpg", width: 2000, height: 1228, alt: "Yellowstone" },
+];
+
+function photoSeries(photo) {
+  const name = photo.src.split("/").pop();
+  if (name.startsWith("bali")) return "bali";
+  if (name.startsWith("california")) return "california";
+  if (name.startsWith("dsc")) return "dsc";
+  if (name.startsWith("travel")) return "travel";
+  if (name.startsWith("yellowstone")) return "yellowstone";
+  return name;
+}
+
+function shufflePhotos(list, random) {
+  const copy = [...list];
+  for (let i = copy.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function seededRandom(seed) {
+  let value = seed;
+  return () => {
+    value = (value + 0x6d2b79f5) | 0;
+    let t = Math.imul(value ^ (value >>> 15), 1 | value);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function arrangePhotographs(photos, columns = 2) {
+  const queue = shufflePhotos(photos, seededRandom(20260927));
+  const placed = [];
+
+  while (placed.length < photos.length) {
+    const index = placed.length;
+    const retry = [];
+    let picked = null;
+
+    for (const photo of queue) {
+      const series = photoSeries(photo);
+      const beside =
+        index % columns !== 0 &&
+        placed[index - 1] &&
+        photoSeries(placed[index - 1]) === series;
+      const above =
+        index >= columns &&
+        placed[index - columns] &&
+        photoSeries(placed[index - columns]) === series;
+
+      if (!picked && !beside && !above) {
+        picked = photo;
+      } else {
+        retry.push(photo);
+      }
+    }
+
+    placed.push(picked || retry.shift());
+    queue.length = 0;
+    queue.push(...retry);
+  }
+
+  return placed;
+}
+
+export const galleryPhotographs = arrangePhotographs(photographs);
 
 export const bioParagraphs = [
   "I spent seven years as a Technical Account Manager at Texas Instruments, working alongside customer engineering teams from architecture selection through production launch. I grew four large enterprise accounts from $1.5M in 2014 to $38.5M in 2018 and finished in the top 5% of US sales.",
