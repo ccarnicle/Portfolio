@@ -165,6 +165,19 @@ a:hover {
   margin-bottom: 0;
 }
 
+.about-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.portrait-photo {
+  width: min(100%, 320px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .work-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -175,11 +188,30 @@ a:hover {
   .work-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .work-media {
+    align-items: center;
+    min-height: 360px;
+  }
 }
 
-.work-item img {
-  width: 100%;
+.work-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 16px;
+}
+
+.work-media.wide img {
+  width: 100%;
+  height: auto;
+}
+
+.work-media.portrait img {
+  width: auto;
+  max-width: 168px;
+  max-height: 360px;
+  height: auto;
 }
 
 .work-caption {
@@ -272,10 +304,21 @@ a:hover {
   content: "- ";
 }
 
+.contact-centered {
+  text-align: center;
+}
+
 .contact-list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.contact-centered .contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 28px;
 }
 
 .contact-list li {
@@ -310,11 +353,18 @@ a:hover {
 }
 
 .resume-page {
-  max-width: 62ch;
+  max-width: none;
 }
 
 .resume-page p {
   margin: 0 0 1em;
+}
+
+.resume-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 8.5 / 11;
+  border: 1px solid #e4e4e4;
 }
 
 .visually-hidden {

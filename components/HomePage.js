@@ -23,12 +23,13 @@ export default function HomePage() {
           </div>
           <div className="about-photo">
             <Image
+              className="portrait-photo"
               src="/portrait.jpg"
-              alt="Christopher Carnicle"
+              alt={site.name}
               width={800}
               height={800}
               priority
-              sizes="(max-width: 699px) 100vw, 40vw"
+              sizes="(max-width: 699px) 280px, 360px"
             />
           </div>
         </div>
@@ -36,30 +37,38 @@ export default function HomePage() {
 
       <hr className="hairline" />
 
-      <section id="work" className="section work" aria-labelledby="work-heading">
-        <h2 id="work-heading">Work</h2>
+      <section id="projects" className="section work" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
         <div className="work-grid">
           {projects.map((project) => (
             <article key={project.title} className="work-item">
+              <div className={`work-media ${project.imageLayout}`}>
               <Image
                 src={project.image}
                 alt={project.title}
-                width={800}
-                height={500}
-                sizes="(max-width: 699px) 100vw, 50vw"
+                width={project.width || 800}
+                height={project.height || 500}
+                sizes={
+                  project.imageLayout === "portrait"
+                    ? "280px"
+                    : "(max-width: 699px) 100vw, 50vw"
+                }
               />
+              </div>
               <p className="work-caption">
                 <strong>{project.title}</strong> — {project.caption}
               </p>
-              <ul className="work-links">
-                {project.links.map((link) => (
-                  <li key={link.href}>
-                    <a href={link.href} target="_blank" rel="noopener noreferrer">
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              {project.links.length > 0 && (
+                <ul className="work-links">
+                  {project.links.map((link) => (
+                    <li key={link.href}>
+                      <a href={link.href} target="_blank" rel="noopener noreferrer">
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </article>
           ))}
         </div>
@@ -105,7 +114,22 @@ export default function HomePage() {
           <h2 id="awards-heading">Awards</h2>
           <ul className="list-plain">
             {awards.map((item) => (
-              <li key={item}>{item}</li>
+              <li key={item.id}>
+                {item.parts.map((part, index) =>
+                  typeof part === "string" ? (
+                    <span key={index}>{part}</span>
+                  ) : (
+                    <a
+                      key={part.href}
+                      href={part.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {part.label}
+                    </a>
+                  )
+                )}
+              </li>
             ))}
           </ul>
         </section>
@@ -115,7 +139,7 @@ export default function HomePage() {
 
       <section
         id="contact"
-        className="section contact"
+        className="section contact contact-centered"
         aria-labelledby="contact-heading"
       >
         <h2 id="contact-heading">Contact</h2>
