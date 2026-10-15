@@ -119,7 +119,7 @@ function arrangePhotographs(photos, columns = 2) {
 export const galleryPhotographs = arrangePhotographs(photographs);
 
 export const bioParagraphs = [
-  "I'm a technical builder with a background in enterprise sales, software development, and entrepreneurship. I enjoy working at the intersection of technology and business: solving complex problems, building products, and turning technical ideas into real-world value.",
+  "I'm a technical architect with a background in enterprise sales, software development, and entrepreneurship. I enjoy working at the intersection of technology and business: solving complex problems, building products, and turning technical ideas into real-world value.",
   "I spent seven years as a Technical Account Manager at Texas Instruments, working alongside customer engineering teams from architecture selection through production launch. I grew four large enterprise accounts from $1.5M in 2014 to $38.5M in 2018 and finished in the top 5% of US sales.",
   "I then spent six years building aiSports, an onchain fantasy sports platform. I wrote and deployed the smart contracts: escrow, stablecoin entry, and automated payouts across the Ethereum and Flow blockchains. The aiSports web app ran for four NBA seasons, from August 2020 through August 2026, with about 2,000 monthly active users.",
 ];
