@@ -179,11 +179,11 @@ export const projects = [
 export const experience = [
   {
     company: "aiSports",
-    role: "CEO & Founder",
+    role: "Founder & Lead Engineer",
     location: null,
-    dates: "08/2020–08/2026. Four NBA seasons.",
+    dates: "08/2020–08/2026. Four NBA seasons. Largest daily fantasy site on Flow.",
     bullets: [
-      "Designed and deployed non-custodial escrow and automated stablecoin payouts. The company did not take custody of prize pools.",
+      "Designed and deployed non-custodial escrow and automated stablecoin payouts for about 2,000 monthly active users.",
       "Built the React app and the REST APIs that connected users to the contracts, and kept contest windows up, including a stretch with no downtime during contests.",
       "Multi-chain: EVM (Solidity) and Flow (Cadence).",
       "ML pipeline on GCP Vertex AI and BigQuery for daily NBA player projections.",
@@ -196,7 +196,8 @@ export const experience = [
     dates: "08/2011–04/2013 and 01/2014–06/2019",
     bullets: [
       "Grew a four-account book from $1.5M (2014) to $38.5M (2018) by working inside customer engineering teams from architecture selection through production launch.",
-      "Top 5% of US sales. Texas Instruments High Five Winners Circle.",
+      "Top 5% of US sales.",
+      "Texas Instruments High Five Winners Circle.",
       "Forecasted revenue across concurrent customer programs and presented technical plans to customer executives.",
     ],
   },
@@ -207,7 +208,7 @@ export const experience = [
     dates: "04/2013–12/2013",
     bullets: [
       "Oversaw supply chain and inventory of over 500 components across 30 circuit boards and 3 end products.",
-      "Created and maintained an organizational tool for component tracking, forecasting, vendor share, and availability.",
+      "Built a tool for component tracking, forecasting, vendor share, and availability, and cut PCB spend 30% through distribution pricing.",
     ],
   },
 ];
